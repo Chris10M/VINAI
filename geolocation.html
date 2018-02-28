@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p class="geo_location">
+<script type="text/javascript">
+    wise_words();
+</script>
+</p>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+window.onload = function() {
+    document.getElementById("showcode").innerHTML = getLocation();        
+}
+
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
+</body>
+</html>
