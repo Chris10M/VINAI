@@ -13,11 +13,11 @@ def init_current_location_():
     if os.path.exists(filename):
         os.remove(filename)
 
-    subprocess.call(['bash ./get_location.sh'])
+    subprocess.call(['bash', 'get_location.sh'])
 
 
-#class init__:
-#    init_current_location_()
+class init__:
+    init_current_location_()
 
 
 def convert_coordinates(latitude, longitude):

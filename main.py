@@ -22,8 +22,8 @@ class Say:
     @staticmethod
     def phrase(text):
         print(text)
-        #Say.engine.say(text)
-        #Say.engine.runAndWait()
+        Say.engine.say(text)
+        Say.engine.runAndWait()
 
 
 class OcrObject:
@@ -132,7 +132,7 @@ def main():
         word_phrase = SpeechWorker.get()
 
         #test
-        word_phrase = input()
+        #word_phrase = input()
         if word_phrase is None:
             pass
         else:

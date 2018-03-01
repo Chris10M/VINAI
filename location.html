@@ -1,0 +1,40 @@
+
+<!-- saved from url=(0050)file:///home/pi/Desktop/practice/geo_location.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body>CTYPE html&gt;
+
+	
+
+		<p class="geo_location">
+		<script type="text/javascript">
+    wise_words();
+		</script>
+		</p>
+
+		<p id="demo">Latitude: 13.084909699999999<br>Longitude: 80.193075</p>
+
+		<script>
+var x = document.getElementById("demo");
+
+window.onload = function() {
+	    document.getElementById("showcode").innerHTML = getLocation();        
+}
+
+
+function getLocation() {
+	    if (navigator.geolocation) {
+		            navigator.geolocation.getCurrentPosition(showPosition);
+			        } else { 
+					        x.innerHTML = "Geolocation is not supported by this browser.";
+						    }
+}
+
+function showPosition(position) {
+	    x.innerHTML = "Latitude: " + position.coords.latitude + 
+		        "<br>Longitude: " + position.coords.longitude;
+}
+		</script>
+
+	
+
+
+</body></html>
